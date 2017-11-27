@@ -1,6 +1,7 @@
 package main
 
 import "unicode"
+import "strings"
 
 func RemoveEven(arr [] int) []int {
 	res := make([]int, 0)
