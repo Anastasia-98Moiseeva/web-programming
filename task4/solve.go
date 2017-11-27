@@ -3,14 +3,14 @@ package main
 import "unicode"
 import "strings"
 
-func RemoveEven(x []int) []int {
-    res := make([]int, 0)
-    for _, val := range x {
+func RemoveEven(a []int) []int {
+    r := make([]int, 0)
+    for _, val := range a {
         if val % 2 == 1 {
-            res = append(res, val)
+            r = append(r, val)
         }
     }
-    return res
+    return r
 }
 
 func PowerGenerator(x int) func() int {
