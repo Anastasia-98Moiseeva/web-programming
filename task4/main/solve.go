@@ -3,7 +3,7 @@ package main
 import "unicode"
 
 func RemoveEven(arr [] int) []int {
-	res := []int{}
+	res := make([]int, 0)
     for _, value := range (arr) {
 		if value % 2 == 1 {
 			result = append(res, value)
@@ -30,7 +30,7 @@ func DifferentWordsCount(s string) int {
             w = append(w, string(unicode.ToUpper(let)))
 		} else if subst != "" {
 			if !e[let] {
-                res += 1
+                res = append(res, 1)
 			}
 		e[w] = true
 		w = ""
