@@ -28,10 +28,10 @@ func DifferentWordsCount(st string) int {
     str = st + " "
     for _, l := range (str) {
         if unicode.IsLetter(l) {
-            w = append(w, string(unicode.ToLower(l)))
+            w = w + string(unicode.ToLower(l))
         } else if w != "" {
             if !s[w] {
-                res += 1
+                res = res + 1
             }
             s[w] = true
             w = ""

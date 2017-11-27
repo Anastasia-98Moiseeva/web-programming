@@ -3,14 +3,14 @@ package main
 import "unicode"
 import "strings"
 
-func RemoveEven(x []int) []int {
-    res := make([]int, 0)
-    for _, val := range x {
+func RemoveEven(a []int) []int {
+    r := make([]int, 0)
+    for _, val := range a {
         if val % 2 == 1 {
-            res = append(res, val)
+            r = append(r, val)
         }
     }
-    return res
+    return r
 }
 
 func PowerGenerator(x int) func() int {
@@ -28,10 +28,10 @@ func DifferentWordsCount(st string) int {
     str = st + " "
     for _, l := range (str) {
         if unicode.IsLetter(l) {
-            w = append(w, string(unicode.ToLower(l)))
+            w = w + string(unicode.ToLower(l))
         } else if w != "" {
             if !s[w] {
-                res += 1
+                res = res + 1
             }
             s[w] = true
             w = ""
